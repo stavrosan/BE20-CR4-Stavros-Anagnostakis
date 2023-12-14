@@ -11,7 +11,7 @@ $row = mysqli_fetch_assoc($result);
 //Select which cols to update in the form in HTML
 if(isset($_POST["update"])){
 $title = $_POST["title"];
-$picture = ["picture"];
+$picture = picUpload($_FILES["picture"]);
 $type = $_POST["type"];
 $authorln = $_POST["author_last_name"];
 $description = $_POST["short_description"];
@@ -59,7 +59,7 @@ mysqli_close($connect);
 
         <div class="container">
 
-               <form action="" method="POST" class="mx-auto mt-4" style="width:60%">
+               <form action="" method="POST" class="mx-auto mt-4" style="width:60%" enctype="multipart/form-data">
                <div class="mb-3">
                <input type="text" class="form-control" name="title" placeholder="Change title"  value="<?= $row["title"] ?>">
                </div>
@@ -70,13 +70,13 @@ mysqli_close($connect);
                <input type="text" class="form-control" name="short_description" placeholder="Change short description" value="<?= $row["short_description"] ?>">
                </div>
                <div class="mb-3">
-               <input type ="file" class="form-control" name="picture" value="<?= $row["picture"] ?>">
+               <input type ="file" class="form-control" name="picture" value="<?= $row["picture"]?>">
                </div>
                <div class="mb-3">
                <select name=type>
-                    <option value="Book" <?php $row["type"] == "book" ? "selected" : "" ?>>Book</option>
-                    <option value="CD" <?php $row["type"] == "cd" ? "selected" : "" ?>>CD</option>
-                    <option value="DVD" <?php $row["type"] == "dvd" ? "selected" : "" ?>>DVD</option>
+                    <option value="Book" <?php $row["type"] == "Book" ? "selected" : "" ?>>Book</option>
+                    <option value="CD" <?php $row["type"] == "CD" ? "selected" : "" ?>>CD</option>
+                    <option value="DVD" <?php $row["type"] == "DVD" ? "selected" : "" ?>>DVD</option>
                </select>
                </div>
                <div class="mb-3">

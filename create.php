@@ -7,7 +7,7 @@ require_once 'components/picUpload.php';
 //Select the cols from db table to create a new entry from the form in HTML
 if(isset($_POST["create"])){
 $title = $_POST["title"];
-($picture = picUpload($_FILES["picture"]));
+$picture = picUpload($_FILES["picture"]);
 $type = $_POST["type"];
 $authorln = $_POST["author_last_name"];
 $publisher = $_POST["publisher_name"];
