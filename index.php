@@ -43,7 +43,7 @@ mysqli_close($connect);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Media Library-BE20-CR4</title>
+    <title>Big Media Library</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
@@ -51,8 +51,8 @@ mysqli_close($connect);
 <?php require_once 'components/navbar.php';?>
 
 <!-- Bootstrap container for display of media cards list -->
-<div class="container">
-<div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-xs-2">
+<div class="container mt-5">
+<div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
     <?= $list ?>
 </div>
 </div>
@@ -111,13 +111,13 @@ mysqli_close($connect);
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!" class="text-white">The Big Media Library</a>
+              <a href="" class="text-white">The Big Media Library</a>
             </li>
             <li>
-              <a href="#!" class="text-white">123 Street</a>
+              <a href="" class="text-white">123 Street</a>
             </li>
             <li>
-              <a href="#!" class="text-white">05765 NY</a>
+              <a href="" class="text-white">05765 NY</a>
             </li>
           </ul>
         </div>
@@ -147,7 +147,7 @@ mysqli_close($connect);
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2023 Copyright: Code Factory
+      © 2023 Copyright: Stavros Anagnostakis
     </div>
     <!-- Copyright -->
   </footer>
