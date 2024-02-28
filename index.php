@@ -11,22 +11,22 @@ $list = "";
 if($rows = mysqli_num_rows($result) > 0){
     while ($row = mysqli_fetch_assoc($result)) {
         $list .= "
-        <div class='col md-4 p-2'>
-        <div class='card h-100'>
+    <div class='col md-4 p-2'>
+      <div class='card h-100'>
         <img src= assets/$row[picture] class='card-img-top object-fit-cover' style='height:15rem' alt=''>
-        <div class='card-body d-flex flex-column align-items-center'>
+         <div class='card-body d-flex flex-column align-items-center'>
           <p class='card-text'>$row[type]</p>
           <h5 class='card-title'>$row[title]</h5>
           <h5 class='card-title fst-italic'>by $row[author_first_name] $row[author_last_name]</h5>
           <a href='publisher.php?publisher_name=$row[publisher_name]'<h5 class='card-title'>Publisher: $row[publisher_name]</h5></a>
           <div class='mt-auto align-self-center'>
-          <a href='details.php?id=$row[id]' class='btn btn-info'>Show details</a>
+          <a href='details.php?id=$row[id]' class='btn btn-outline-dark'>Show details</a>
           <a href='update.php?id=$row[id]' class='btn btn-warning'>Edit</a>
           <a href='delete.php?id=$row[id]' class='btn btn-danger'>Delete</a>
           </div>
         </div>
       </div>
-      </div>
+    </div>
         ";
     }
 }
@@ -52,9 +52,9 @@ mysqli_close($connect);
 
 <!-- Bootstrap container for display of media cards list -->
 <div class="container mt-5">
-<div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+ <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
     <?= $list ?>
-</div>
+ </div>
 </div>
 
 

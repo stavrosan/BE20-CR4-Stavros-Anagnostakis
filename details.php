@@ -13,8 +13,8 @@ $detCard = "";
 if(mysqli_num_rows($result) > 0){
     $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
         $detCard .= "
-        <div class='p-2'>
-        <div class='card h-100'>
+    <div class='p-2'>
+      <div class='card h-100'>
         <img src= assets/{$row[0]["picture"]} class='card-img-top object-fit-cover' style='height:30rem' alt='image cover'>
         <div class='card-body'>
           <p class='card-text'>{$row[0]["type"]}</p>
@@ -26,8 +26,8 @@ if(mysqli_num_rows($result) > 0){
           <p class='card-text'>Status: {$row[0]["status"]}</p>
         </div>
       </div>
-      </div>
-        ";
+    </div>
+    ";
 }
 };
 
